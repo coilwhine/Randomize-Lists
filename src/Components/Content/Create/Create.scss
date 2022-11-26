@@ -1,0 +1,83 @@
+.Create {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    h1 {
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .list-name {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 20px 70px;
+            border-radius: 10px;
+            background-color: var(--yellowColor);
+
+            input {
+                border-style: none;
+                padding-left: 20px;
+                width: 150px;
+                height: 20px;
+                padding: 10px 20px;
+                background: white;
+                border-radius: 40px;
+                box-shadow: 0 0 7px var(--shadow);
+            }
+
+            label {
+                border-style: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 700;
+                font-size: 1rem;
+                color: var(--darkColor);
+                transition: 200ms;
+            }
+        }
+
+        .item-adding {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+
+            input {
+                border-style: none;
+                padding-left: 20px;
+                width: 150px;
+                height: 20px;
+                padding: 10px 20px;
+                background: white;
+                border-radius: 40px;
+                box-shadow: 0 0 7px var(--shadow);
+            }
+
+            label {
+                border-style: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 700;
+                font-size: 1rem;
+                color: var(--darkColor);
+                transition: 200ms;
+            }
+
+            button {
+                display: flex;
+                border-style: none;
+            }
+        }
+    }
+}

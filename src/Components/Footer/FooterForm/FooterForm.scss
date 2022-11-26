@@ -1,0 +1,42 @@
+.FooterForm {
+    position: relative;
+    bottom: 20px;
+    display: flex;
+
+    form {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 300px;
+
+        button {
+            border-style: none;
+            position: absolute;
+            right: 0;
+            height: 100%;
+            width: 90px;
+            border-radius: 40px;
+            color: white;
+            font-weight: 700;
+            font-size: 0.8rem;
+            background: var(--orangeColor);
+            transition: 200ms;
+
+            &:hover {
+                background: var(--redColor);
+            }
+        }
+
+        input {
+            border-style: none;
+            padding-left: 20px;
+            width: 100%;
+            height: 20px;
+            padding: 10px 20px;
+            background: white;
+            border-radius: 40px;
+            box-shadow: 0 0 7px var(--shadow);
+        }
+    }
+
+}

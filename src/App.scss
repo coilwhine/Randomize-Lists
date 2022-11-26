@@ -1,0 +1,21 @@
+:root {
+    --darkColor: #282A35;
+    --yellowColor: #EFD23C;
+    --orangeColor: #EF663D;
+    --redColor: #EF3D51;
+
+    --shadow: #282a3553;
+    --yellowGlow: #efd13c60;
+    --redGlow: #ef3d525a;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+a,
+button {
+    cursor: pointer;
+}
