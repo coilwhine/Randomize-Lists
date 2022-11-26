@@ -1,5 +1,3 @@
-import { useSelector } from "react-redux";
-import { AuthState } from "../../app/authSlice";
 import "./Header.scss";
 import HeaderLogo from "./HeaderLogo/HeaderLogo";
 import Navigation from "./Navigation/Navigation";

@@ -5,7 +5,7 @@ import "./CreateListName.scss";
 
 function CreateListName({ setListName, listName, minListNameLength, maxListNameLength }: any): JSX.Element {
 
-    const { register, handleSubmit, reset } = useForm();
+    const { register, handleSubmit } = useForm();
     const { lists } = useSelector((state: any) => state?.lists)
 
 

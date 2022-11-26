@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addList } from "../../../app/listsSlice";
 import "./Create.scss";
@@ -18,7 +18,6 @@ function Create(): JSX.Element {
     const [listItems, setListItems] = useState<string[]>([]);
     const navigate = useNavigate()
 
-    const { lists } = useSelector((state: any) => state?.lists)
     const dispatch = useDispatch()
 
 

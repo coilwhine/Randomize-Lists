@@ -1,5 +1,5 @@
-import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { removeList } from "../../../../app/listsSlice";
 import { ListModel } from "../../../../Models/listModel";
 import "./List.scss";
