@@ -1,0 +1,14 @@
+.MyLists {
+    display: flex;
+    flex-direction: column;
+    color: var(--darkColor);
+    gap: 10px;
+    width: 100%;
+
+    .lists-wraper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+}

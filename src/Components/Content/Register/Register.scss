@@ -1,0 +1,64 @@
+.Register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+
+    form {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: var(--orangeColor);
+        padding: 20px;
+        padding-bottom: 35px;
+        border-radius: 10px;
+        gap: 10px;
+
+        input {
+            border-style: none;
+            padding-left: 20px;
+            font-size: 0.9rem;
+            height: 30px;
+            width: 80%;
+            padding: 5px 10px;
+            background: white;
+            border-radius: 40px;
+            box-shadow: 0 0 7px var(--shadow);
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+            border-style: none;
+            background-color: var(--darkColor);
+            border-radius: 10px;
+            padding: 10px 20px;
+            box-shadow: 0 0 3px 2px var(--shadow);
+
+            &:active {
+                box-shadow: 0 0 3px 0 var(--shadow);
+            }
+
+            &:disabled {
+                box-shadow: 0 0 3px 0 var(--shadow);
+                background-color: #515269;
+                cursor: default;
+            }
+        }
+
+        .flout-btn {
+            position: absolute;
+            bottom: -20px;
+        }
+    }
+}

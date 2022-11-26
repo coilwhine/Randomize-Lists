@@ -5,7 +5,7 @@ function HeaderLogo(): JSX.Element {
     return (
         <div className="HeaderLogo">
             <Link to="/">
-                <img src="./assets/Logo.svg" alt="random logo" />
+                <img src="/assets/Logo.svg" alt="random logo" />
                 <span>Randomizer</span>
             </Link>
         </div>

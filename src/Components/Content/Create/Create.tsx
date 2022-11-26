@@ -1,32 +1,56 @@
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { addList } from "../../../app/listsSlice";
 import "./Create.scss";
-import { useForm } from 'react-hook-form';
+import CreateListItem from "./CreateListItem/CreateListItem";
+import CreateListName from "./CreateListName/CreateListName";
+
 
 function Create(): JSX.Element {
+    const minListNameLength = 1;
+    const maxListNameLength = 25;
+    const minListItemLength = 1;
+    const maxListItemLength = 25;
+    const minItemInList = 1;
 
-    const { register, handleSubmit, reset } = useForm();
+    const [listName, setListName] = useState<string>('');
+    const [listItems, setListItems] = useState<string[]>([]);
+    const navigate = useNavigate()
 
-    function onSubmit(data: any) {
-        console.log(data);
-        reset()
+    const { lists } = useSelector((state: any) => state?.lists)
+    const dispatch = useDispatch()
+
+
+    function createList() {
+        const newList = {
+            listName: listName,
+            items: listItems
+        }
+
+        if (newList.listName.length < minListNameLength) {
+            if (newList.items.length < minItemInList) {
+                return alert('list nameis too short and there are no items')
+            }
+            return alert('list name is too short')
+        }
+        if (newList.items.length < minItemInList) {
+            return alert('ther have to be items in list');
+        }
+        dispatch(addList(newList))
+        navigate('/myLists');
     }
 
     return (
         <div className="Create">
-            <h1>Create New List</h1>
-            <form id="new-list-form" onSubmit={handleSubmit(onSubmit)}>
-                <div className="list-name">
-                    <label id="new-list-name-label">List Name</label>
-                    <input type="text" id="new-list-name" placeholder="Enter list name..." {...register('name')}></input>
-                </div>
-                <div className="item-adding">
-                    <div>
-                        <label id="new-list-item-label">Item Name</label>
-                        <input type="text" id="new-list-item" placeholder="Enter item name..." {...register('item')}></input>
-                    </div>
-                    <button type="button"><img src="" alt="plus sign" /></button>
-                </div>
-            </form>
-        </div>
+            <div className="heading">
+                <h1 className="main-heading">Create New List</h1>
+                <p className="secondary-heading">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit similique?</p>
+            </div>
+            <CreateListName setListName={setListName} listName={listName} minListNameLength={minListNameLength} maxListNameLength={maxListNameLength} />
+            <CreateListItem setListItems={setListItems} listItems={listItems} minListItemLength={minListItemLength} maxListItemLength={maxListItemLength} listName={listName} />
+            {listName ? <button className="submit-new-list" onClick={createList}>Submit New List</button> : <></>}
+        </div >
     );
 }
 

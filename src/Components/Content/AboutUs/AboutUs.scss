@@ -1,3 +1,14 @@
 .AboutUs {
-	
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: var(--darkColor);
+    width: 100%;
+
+    img {
+        margin: auto;
+        border-radius: 50px;
+        max-width: 300px;
+        box-shadow: 3px 3px 10px var(--shadow);
+    }
 }

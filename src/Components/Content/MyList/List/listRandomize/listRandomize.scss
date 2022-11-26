@@ -1,0 +1,91 @@
+.listRandomize {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .go-back-btn {
+            text-decoration: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: 700;
+            box-shadow: 0 0 3px 2px var(--shadow);
+            background-color: var(--darkColor);
+
+            &:active {
+                box-shadow: 0 0 3px 0 var(--shadow);
+            }
+        }
+    }
+
+    .time-indicator {
+        font-weight: bold;
+    }
+
+    .items-wraper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--orangeColor);
+            color: var(--darkColor);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 700;
+            text-align: center;
+
+            .del-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                width: 25px;
+                height: 25px;
+                border-style: none;
+                font-size: 0.7rem;
+                font-weight: 700;
+                background-color: var(--redColor);
+                border-radius: 20px;
+                padding: 5px 5px;
+                box-shadow: 0 0 3px 2px var(--shadow);
+
+                &:active {
+                    box-shadow: 0 0 3px 0 var(--shadow);
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: white;
+        border-style: none;
+        background-color: var(--darkColor);
+        border-radius: 10px;
+        padding: 10px 20px;
+        box-shadow: 0 0 3px 2px var(--shadow);
+
+        &:active {
+            box-shadow: 0 0 3px 0 var(--shadow);
+        }
+    }
+}

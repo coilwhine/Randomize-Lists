@@ -1,51 +1,57 @@
 .Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 
     .heading {
         display: flex;
         flex-direction: column;
-        align-items: center;
-
-        .main-heading {
-            color: var(--redColor);
-            font-size: 4rem;
-        }
 
         .secondary-heading {
             color: var(--darkColor);
             font-size: 0.9rem;
             line-height: 27px;
-            max-width: 400px;
-            padding-left: 5px;
+            padding-left: 3px;
         }
     }
 
     .home-menu {
         display: flex;
-        gap: 30px;
-        padding: 30px;
+        justify-content: space-around;
+        gap: 20px;
 
         .big-btn {
-            width: 340px;
-            height: 300px;
             display: flex;
-            position: relative;
-            top: 0;
             align-items: center;
             justify-content: center;
-            text-decoration: none;
+            width: 180px;
+            height: 150px;
+            position: relative;
+            top: 0;
             color: white;
-            font-size: 1rem;
+            text-decoration: none;
+            font-size: 0.7rem;
             border-radius: 10px;
-            box-shadow: 0 0 10px 3px var(--shadow);
+            box-shadow: 0 0 8px 3px var(--shadow);
             transition: 250ms ease-in-out;
+
 
             &.create-big-btn {
                 background-color: var(--orangeColor);
 
+
                 &:hover {
                     background-color: var(--redColor);
                     box-shadow: 0 0 10px 0 var(--shadow);
-                    top: 1px;
+                    top: 2px;
+                }
+
+                &:active {
+                    background-color: var(--redColor);
+                    box-shadow: 0 0 10px 0 var(--shadow);
+                    top: 2px;
                 }
             }
 
@@ -55,7 +61,47 @@
                 &:hover {
                     background-color: var(--redColor);
                     box-shadow: 0 0 10px 0 var(--shadow);
-                    top: 1px;
+                    top: 2px;
+                }
+
+                &:active {
+                    background-color: var(--redColor);
+                    box-shadow: 0 0 10px 0 var(--shadow);
+                    top: 2px;
+                }
+            }
+
+            &.register-big-btn {
+                // width: 100%;
+                background-color: var(--redColor);
+
+                &:hover {
+                    background-color: var(--redColor);
+                    box-shadow: 0 0 10px 0 var(--shadow);
+                    top: 2px;
+                }
+
+                &:active {
+                    background-color: var(--redColor);
+                    box-shadow: 0 0 10px 0 var(--shadow);
+                    top: 2px;
+                }
+            }
+
+            &.logIn-big-btn {
+                // width: 100%;
+                background-color: var(--yellowColor);
+
+                &:hover {
+                    background-color: var(--redColor);
+                    box-shadow: 0 0 10px 0 var(--shadow);
+                    top: 2px;
+                }
+
+                &:active {
+                    background-color: var(--redColor);
+                    box-shadow: 0 0 10px 0 var(--shadow);
+                    top: 2px;
                 }
             }
 
@@ -63,10 +109,13 @@
     }
 
     .diractions {
-        width: 360px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 90%;
         margin: 0 auto;
         background-color: white;
-        padding: 20px 40px;
+        padding: 20px;
         border-radius: 10px;
         box-shadow: 0 0 10px var(--shadow);
 
@@ -78,7 +127,7 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
-            margin-top: 20px;
+            margin-top: 10px;
             list-style: none;
 
             li {

@@ -1,0 +1,43 @@
+.List {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    span {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+        color: var(--darkColor);
+        font-weight: 700;
+        padding: 10px 20px;
+        border-radius: 30px;
+        background-color: var(--yellowColor);
+        font-size: 1rem;
+        cursor: pointer;
+
+        .del-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-style: none;
+            font-size: 0.7rem;
+            font-weight: 700;
+            background-color: var(--redColor);
+            border-radius: 20px;
+            padding: 5px 5px;
+            box-shadow: 0 0 3px 2px var(--shadow);
+
+            &:active {
+                box-shadow: 0 0 3px 0 var(--shadow);
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
